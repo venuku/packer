@@ -33,11 +33,11 @@
     "ami_users"     : [ "{{user `launchPermissions`}}" ],
     "ami_regions" : "us-west-2",
     "ami_regions" : "us-west-2",
-    "ssh_username": "centos",#depends on the source ami u need to specify user name
+    "ssh_username": "centos",
     "run_tags": {
         "ChargeCode": "tags",
         "Product": "tags",
-        "Role": "Packer" specify what ever you want the tags
+        "Role": "Packer" 
      }
    }],
   "provisioners" : [

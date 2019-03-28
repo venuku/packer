@@ -2,11 +2,11 @@
   "variables": {
     "aws_access_key": "",
     "aws_secret_key": "",
-    "source_ami": "source_ami_id",    #which ever you want to specify 
+    "source_ami": "source_ami_id",   
     "date_stamp": "",
     "name": "venu_testing_",
-    "launchPermissions": "account_id",#for sharing multiple regions
-    "launchPermissions": "account_id",#for sharing multiple account
+    "launchPermissions": "account_id",
+    "launchPermissions": "account_id",
     "region":"us-west-2"
   },
   "builders": [{
@@ -55,7 +55,7 @@
       "type": "shell",
       "scripts": [
         "scripts/reboot.sh"],
-       "expect_disconnect": true # in local packer build when you rebooing you need this line
+       "expect_disconnect": true 
    },
     { "type": "file",
       "source": "scripts",
@@ -65,15 +65,10 @@
       "source": "trusted_certs",
       "destination": "/tmp/trusted_certs"
     },
+    
     { "type": "shell",
       "inline": [
-        "sudo mv /tmp/scripts /opt/script && sudo chown -R root:root /opt/script",
-        "sudo mv /tmp/trusted_certs /etc/chef && sudo chown -R root:root /path/chef"
-	]
-    },
-    { "type": "shell",
-      "inline": [
-        "sudo /bin/mkdir -p /tmp/packer/inspec && sudo chown -R centos:centos /tmp/packer/inspec"  note: these are inspec tests optional
+        "sudo /bin/mkdir -p /tmp/packer/inspec && sudo chown -R centos:centos /tmp/packer/inspec"  
       ]
     },
     {

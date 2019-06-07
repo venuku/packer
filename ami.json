@@ -1,6 +1,6 @@
 {
   "variables": {
-    "aws_access_key": "",
+    "aws_access_key": "test,
     "aws_secret_key": "",
     "source_ami": "source_ami_id",   
     "date_stamp": "",
